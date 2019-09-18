@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@ViewBag.Title</title>
+
+    <environment include="Development">
+        <link href="~/lib/bootstrap/4.3.1-dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/custom.css" rel="stylesheet" />
+    </environment>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NAVBAR BRAND</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglePrimary"
+                aria-controls="navbarTogglePrimary" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglePrimary">
+            <ul class="navbar-nav mr-auto">
+                <li>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                        Home <span class="sr-only">
+                            (current)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                        Menu Item 1 <span class="sr-only">
+                            (current)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">
+                        Menu Item 2 <span class="sr-only">
+                            (current)
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <copyright class="container">
+            <p class="text-center">BrandName Copyright &copy; @DateTime.Now.Year - All Rights Reserved</p>
+        </copyright>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/JQuery/jquery-3.4.1.js.js"></script>
+        <script src="~/lib/bootstrap/4.3.1-dist/js/bootstrap.js"></script>
+
+    </environment>
+
+</body>
+</html>
